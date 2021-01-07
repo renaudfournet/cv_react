@@ -1,16 +1,16 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Informations from "./component/Informations";
-import Name from "./component/Name";
-import Xp from "./Xp";
+import Navigation from "./components/Navigation";
+import Header from "./components/Header";
+import Presentation from "./components/Presentation";
 
 function App() {
   return (
     <div className="App">
-      <Name name="Renaud Fournet" />
-      <Informations />
-      <Xp />
+      <Navigation />
+      <Header />
+      <Presentation />
     </div>
   );
 }
