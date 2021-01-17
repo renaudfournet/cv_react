@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 function Header() {
   const styleName = {
       color: "#2A26F0",
@@ -12,7 +14,7 @@ function Header() {
     },
     verticalLine = {
       borderLeft: "solid",
-      height: 100,
+      height: 164,
       left: 50,
       marginLeft: "50%",
       color: "#2A26F0",
@@ -21,7 +23,6 @@ function Header() {
     },
     presentation = {
       color: "#2A26F0",
-      fontWeight: 300,
     };
   return (
     <div style={header}>
@@ -33,9 +34,17 @@ function Header() {
         <span style={styleName}>RENAUD FOURNET.</span>
       </h3>
       <div style={verticalLine}></div>
+      <StyledFontWeight>
       <p style={presentation}>Développeur web Javascript junior</p>
+      </StyledFontWeight>
     </div>
   );
 }
+
+const StyledFontWeight = styled.p`
+p {
+  font-weight: 300,
+}
+`
 
 export default Header;

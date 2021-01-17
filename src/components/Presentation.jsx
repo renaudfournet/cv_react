@@ -1,44 +1,82 @@
 import React from "react";
 import { Jumbotron, Container } from "reactstrap";
+import styled from 'styled-components'
 
 import "../index.css";
 
-const Presentation = () => {
-  const presentation = {
-      backgroundColor: "#191919",
-      margin: 150,
-      fontWeight: 300,
-    },
-    textPresentation = { color: "white" },
-    listPresentation = {
-      display: "flex",
-      justifyContent: "center",
-      color: "red",
-      fontSize: 10,
-      fontWeight: "bold",
-    },
-    items = { margin: 10, color: "white" };
+function Presentation() {
+
+  const styleCard = {
+    padding: 80,
+  }
+
   return (
-    <div>
-      <Jumbotron fluid style={presentation}>
-        <Container fluid>
-          <p className="lead" style={textPresentation}>
-            Passioné de nouvelles technologies et toujours partant pour de
-            nouveaux challenges, j'aimerais développer mes compétences au
-            travers d'un stage et participer à des projets inspirants.
-          </p>
-          <div style={listPresentation}>
-            <li style={items}>Anglais courant</li>
-            <li style={items}>Curieux</li>
-            <li style={items}>Réactif</li>
-            <li style={items}>Ésprit d'équipe</li>
-            <li style={items}>Flexibilité</li>
-            <li style={items}>Prise d'initiative</li>
-            <li style={items}>Empathie</li>
+    <div style={styleCard}>
+      <StyledCard>
+      <div>
+        <Jumbotron fluid>
+          <Container>
+            <StyledPresentation>
+            <p>
+              Passioné de nouvelles technologies et toujours partant pour de
+              nouveaux challenges, j'aimerais développer mes compétences au
+              travers d'un stage et participer à des projets inspirants.
+            </p>
+          </StyledPresentation>
+          <StyledList>
+            <div>
+              <li>Anglais courant</li>
+              <li>Curieux</li>
+              <li>Réactif</li>
+              <li>Ésprit d'équipe</li>
+              <li>Flexibilité</li>
+              <li>Prise d'initiative</li>
+              <li>Empathie</li>
+            </div>
+          </StyledList>
+          <div>
+            <h3>CE QUE JE FAIS </h3>
+            <div><h4>FRONT</h4></div>
+            <div><h4>BACK</h4></div>
+            <div><h4>ENVIRONMENT</h4></div>
           </div>
-        </Container>
-      </Jumbotron>
+          </Container>
+        </Jumbotron>
+        </div>
+        </StyledCard>
     </div>
   );
-};
+}
+
+
+
+const StyledCard = styled.div`
+div {
+  background-color: #191919;
+}
+`
+const StyledList = styled.div`
+div {
+    color: white; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: space-evenly;
+  }
+`
+
+const StyledPresentation = styled.p`
+p {
+  margin: 50px; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+`
+
+
+
+
 export default Presentation;
